@@ -115,11 +115,11 @@ p {
 
 a {
   color: #126DC1;
-  text-decoration: none;
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none; }
 
-a:hover {
-  text-decoration: underline; }
+a.underline {
+  border-bottom: solid 1px #126DC1; }
 
 *::selection {
   background: #CCE6FF; }
@@ -140,12 +140,19 @@ li {
   margin-top: 1rem; }
 
 dl {
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
+  margin: 0;
+  clear: left; }
+
+dt {
+  font-weight: bold;
+  float: left;
+  clear: left;
+  padding-right: 0.3rem; }
 
 dd {
-  margin-bottom: 1.5rem;
-  margin-left: 4rem; }
+  margin: 0;
+  padding: 0;
+  min-height: 1.5rem; }
 
 .table-scroll-container {
   max-width: 100%;
@@ -193,7 +200,8 @@ input[type="text"] {
   border: solid 1px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  padding: 0.75rem;
+  padding: 0.6rem;
+  line-height: 1.4;
   width: 100%; }
 
 input[type="text"]:disabled,
@@ -477,6 +485,52 @@ footer {
     .datastore-list li.selected a {
       color: #126DC1; }
 
+/*
+  Multiple results container // aka Bento box
+*/
+.multiple-results-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem 0 0 -1rem; }
+
+.datastore-results {
+  display: inline-block;
+  flex-grow: 1;
+  margin: 1rem 0 0 1rem;
+  width: calc(100% * (1/2) - 1rem); }
+
+/*
+  Results List
+*/
+.results-container {
+  display: flex;
+  flex-wrap: wrap; }
+
+.results-list {
+  margin: 0;
+  list-style: none; }
+
+.record-title {
+  font-size: 1.1rem;
+  text-decoration: none; }
+
+.more-results-link {
+  display: inline-block;
+  margin-top: 1rem; }
+
+/*
+  Record
+*/
+.record {
+  padding: 0;
+  border-bottom: solid 1px #E5E5E5;
+  padding-bottom: 1rem; }
+  .record p {
+    margin-bottom: 0; }
+
+.record-metadata {
+  padding-top: 0.5rem; }
+
 .container-fluid,
 .container {
   margin-right: auto;
@@ -495,9 +549,7 @@ footer {
   -ms-flex-direction: row;
   flex-direction: row;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem; }
+  flex-wrap: wrap; }
 
 .row.reverse {
   -webkit-box-orient: horizontal;

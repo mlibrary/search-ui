@@ -68,12 +68,12 @@ p {
 // Links
 a {
   color: $main-3;
-  text-decoration: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+a.underline {
+  border-bottom: solid 1px $main-3;
 }
 
 // Selection
@@ -106,13 +106,21 @@ li {
 // Definition lists
 
 dl {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 0;
+  clear: left;
+}
+
+dt {
+  font-weight: bold;
+  float: left;
+  clear: left;
+  padding-right: 0.3rem;
 }
 
 dd {
-  margin-bottom: 1.5rem;
-  margin-left: 4rem;
+  margin: 0;
+  padding: 0;
+  min-height: 1.5rem;
 }
 
 // Table
