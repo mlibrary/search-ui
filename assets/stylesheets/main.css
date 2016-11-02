@@ -54,15 +54,14 @@ html {
   box-sizing: inherit; }
 
 .container {
-  max-width: 64rem;
   margin: 0 auto;
   padding: 0 1rem; }
 
+.container-narrow {
+  max-width: 52rem; }
+
 .container-fluid {
   padding: 0 1rem; }
-
-.container-max-width {
-  max-width: 88rem; }
 
 /*
   Site
@@ -467,7 +466,8 @@ footer {
 
 .datastore-list {
   margin: 0;
-  margin-bottom: -2px; }
+  margin-bottom: -2px;
+  margin-left: -1rem; }
   .datastore-list li {
     display: inline-block;
     padding-right: 0.5rem;
@@ -497,7 +497,13 @@ footer {
   display: inline-block;
   flex-grow: 1;
   margin: 1rem 0 0 1rem;
-  width: calc(100% * (1/2) - 1rem); }
+  width: calc(100% - 1rem); }
+  @media (min-width: 32rem) {
+    .datastore-results {
+      width: calc(100% * (1/2) - 1rem); } }
+  @media (min-width: 72rem) {
+    .datastore-results {
+      width: calc(100% * (1/3) - 1rem); } }
 
 /*
   Results List

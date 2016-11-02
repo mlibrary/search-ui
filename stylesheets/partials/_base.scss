@@ -1,13 +1,12 @@
 .container {
-  max-width: 64rem;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-.container-fluid {
-  padding: 0 1rem;
+.container-narrow {
+  max-width: 52rem;
 }
 
-.container-max-width {
-  max-width: 88rem;
+.container-fluid {
+  padding: 0 1rem;
 }
