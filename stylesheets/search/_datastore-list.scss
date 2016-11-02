@@ -1,0 +1,35 @@
+.datastore-list-container {
+  background: $grey-6;
+  border-bottom: solid 2px $grey-5;
+}
+
+.datastore-list {
+  margin: 0;
+  margin-bottom: -2px;
+
+  li {
+    display: inline-block;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.6rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+
+    a {
+      color: $grey-2;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  li.selected {
+    border-bottom: solid 2px $main-3;
+
+    a {
+      color: $main-3;
+    }
+  }
+}
