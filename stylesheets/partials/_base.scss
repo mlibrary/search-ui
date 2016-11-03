@@ -3,10 +3,12 @@
   padding: 0 1rem;
 }
 
-.container-narrow {
-  max-width: 52rem;
-}
-
 .container-fluid {
   padding: 0 1rem;
+}
+
+.container-large {
+  @media (min-width: 120rem) {
+    width: 90vw;
+  }
 }

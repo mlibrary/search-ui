@@ -1,3 +1,6 @@
+// Vendor and Third-party
+@import "vendor/grid";
+
 // Modules and Variables
 @import "modules/colors";
 @import "modules/fonts";
@@ -15,11 +18,9 @@
 @import "partials/footer";
 @import "partials/callout";
 @import "partials/helper";
+@import "partials/accessibility";
 
 // Search Application
 @import "search/search-box";
 @import "search/datastore-list";
 @import "search/results";
-
-// Vendor and Third-party
-@import "vendor/grid"
