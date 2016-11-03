@@ -1,0 +1,24 @@
+{
+  "name": "search-ui",
+  "version": "1.0.0",
+  "description": "A repo to test out new search user interface ideas.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlibrary/search-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mlibrary/search-ui/issues"
+  },
+  "homepage": "https://github.com/mlibrary/search-ui#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
