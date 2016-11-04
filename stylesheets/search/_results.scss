@@ -44,6 +44,7 @@
 }
 
 .record-title {
+  font-weight: 600;
   font-size: 1.1rem;
   text-decoration: none;
 }
@@ -58,15 +59,61 @@
 */
 .record {
   padding: 0;
-
   border-bottom: solid 1px $grey-5;
   padding-bottom: 1rem;
+}
 
-  p {
-    margin-bottom: 0;
-  }
+.record-description {
+  margin: 0.5rem 0;
 }
 
 .record-metadata {
   padding-top: 0.5rem;
+}
+
+
+.type {
+  font-weight: bold;
+}
+
+/*
+  Record link
+*/
+
+.record-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  border: solid 2px transparent;
+  background: $grey-6;
+
+  opacity: 0.9;
+}
+
+.record-link:hover {
+  background: $main-6;
+  border: solid 2px $main-5;
+  opacity: 1;
+}
+
+.record-link-pre-heading,
+.record-link-heading {
+  line-height: 1.4;
+}
+
+.record-link-pre-heading {
+  display: block;
+  font-size: 80%;
+}
+
+.record-link-heading {
+  display: block;
+  font-weight: 600;
+}
+
+.record-link-info {
+  display: block;
+  font-size: 90%;
+  color: $grey-2;
+  line-height: 1.5;
 }

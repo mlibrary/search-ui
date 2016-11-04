@@ -23,3 +23,12 @@
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
 /* close commented backslash hack */
+
+.light-text {
+  opacity: 0.8;
+  font-size: 90%;
+}
+
+.center-text {
+  text-align: center;
+}

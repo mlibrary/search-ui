@@ -125,11 +125,6 @@ dd {
 
 // Table
 
-.table-scroll-container {
-  max-width: 100%;
-  overflow-x: scroll;
-}
-
 table {
   width: 100%;
   border: solid 1px $grey-5;
@@ -142,17 +137,24 @@ thead {
   border-bottom: solid 2px $grey-5;
 }
 
-tr {
-  border-bottom: solid 1px $grey-5;
-}
-
 td, th {
-  padding: 1rem;
+  padding: 0.75rem 1rem;
 }
 
 th {
   text-align: left;
   color: $grey-3;
+}
+
+.table-compact {
+  table {
+    border: none;
+  }
+
+  td, th {
+    padding: 0.25rem 0.5rem;
+    font-size: 90%;
+  }
 }
 
 // blockquote
