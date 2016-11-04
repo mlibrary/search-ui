@@ -757,7 +757,8 @@ html {
 
 @media (min-width: 80rem) {
   .container-large {
-    width: 96vw; } }
+    width: 96vw;
+    max-width: 110rem; } }
 
 /*
   Site
