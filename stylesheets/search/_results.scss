@@ -81,13 +81,13 @@
 */
 
 .record-link {
-  display: block;
+  display: inline-block;
   padding: 0.75rem 1rem;
   border-radius: 4px;
   border: solid 2px transparent;
   background: $grey-6;
 
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .record-link:hover {
