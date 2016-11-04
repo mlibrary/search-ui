@@ -1285,3 +1285,10 @@ footer {
   font-size: 90%;
   color: #4E4E4E;
   line-height: 1.5; }
+
+.record-image {
+  float: right;
+  width: 100%;
+  max-width: 5rem;
+  margin-left: 0.5rem;
+  border: solid 1px #E5E5E5; }
