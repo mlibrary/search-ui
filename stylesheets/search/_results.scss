@@ -86,8 +86,6 @@
   border-radius: 4px;
   border: solid 2px transparent;
   background: $grey-6;
-
-  opacity: 0.8;
 }
 
 .record-link:hover {
@@ -107,7 +105,7 @@
 }
 
 .record-link-heading {
-  display: block;
+  display: inline-block;
   font-weight: 600;
 }
 

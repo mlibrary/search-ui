@@ -122,7 +122,7 @@ a {
   cursor: pointer;
   text-decoration: none; }
 
-a.underline {
+.underline {
   border-bottom: solid 1px #126DC1; }
 
 *::selection {
@@ -569,8 +569,7 @@ footer {
   padding: 0.75rem 1rem;
   border-radius: 4px;
   border: solid 2px transparent;
-  background: #FAFAFA;
-  opacity: 0.8; }
+  background: #FAFAFA; }
 
 .record-link:hover {
   background: #F2F9FF;
@@ -586,7 +585,7 @@ footer {
   font-size: 80%; }
 
 .record-link-heading {
-  display: block;
+  display: inline-block;
   font-weight: 600; }
 
 .record-link-info {
