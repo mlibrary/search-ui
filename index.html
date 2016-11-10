@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="assets/stylesheets/main.css" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css' />
     <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
   </head>
   <body>
 
@@ -45,28 +47,29 @@
 
     <div class="datastore-list-container">
       <div class="container container-narrow">
-        <ul class="datastore-list">
-          <li class="selected">
-            <a href="index.html">Quick Search</a>
-          </li>
-          <li>
-            <a href="books.html">Books</a>
-          </li>
-          <li>
-            <a href="">Articles</a>
-          </li>
-          <li>
-            <a href="">Online Journals</a>
-          </li>
-          <li>
-            <a href="">Databases</a>
-          </li>
-          <li>
-            <a href="">Website</a>
+        <ul class="datastore-list" id="datastore-navigation">
+          <li v-for="datastore in datastores" v-bind:class="{ active: datastore.isActive }">
+            <a href="{{ datastore.url }}">{{ datastore.name }}</a>
           </li>
         </ul>
       </div>
     </div>
+
+    <script>
+      var datastoreNavigation = new Vue({
+        el: '#datastore-navigation',
+        data: {
+          datastores: [
+            { name: 'Quick Search', isActive: true, url: '/quick-search' },
+            { name: 'Catalog', url: '/catalog' },
+            { name: 'Articles' url: '/articles' },
+            { name: 'Online Journals', url: '/online-journals' },
+            { name: 'Databases', url: '/databases' },
+            { name: 'More', url: '/more' }
+          ]
+        }
+      })
+    </script>
 
     <div class="container container-large">
         <p class="light-text center-text">

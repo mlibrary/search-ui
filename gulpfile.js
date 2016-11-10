@@ -5,21 +5,18 @@ var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 var nunjucks    = require('gulp-nunjucks');
 var clean       = require('gulp-clean');
-var fs          = require('fs')
+var concat      = require('gulp-concat');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['templates', 'sass', 'images'], function() {
+gulp.task('serve', ['templates', 'sass', 'images', 'scripts'], function() {
     browserSync.init({
         server: "./build"
     });
 
-    gulp.watch("./stylesheets/*.scss", ['sass']);
-    gulp.watch("./stylesheets/**/*.scss", ['sass']);
-    gulp.watch("./templates/**/*.html", ['templates']);
-    gulp.watch("./*.json", ['templates']);
-
-    gulp.watch("./templates/*.html").on('change', browserSync.reload);
-    gulp.watch("./data.json").on('change', browserSync.reload);
+    gulp.watch("./stylesheets/**", ['sass']);
+    gulp.watch("./templates/**", ['templates']);
+    gulp.watch("./assets/javascript/**", ['scripts']);
+    gulp.watch("./**").on('change', browserSync.reload);
 });
 
 gulp.task('images', function() {
@@ -32,6 +29,12 @@ gulp.task('sass', function() {
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest("./build/assets/stylesheets"))
         .pipe(browserSync.stream());
+});
+
+gulp.task('scripts', function() {
+    return gulp.src('./assets/javascript/*.js')
+        .pipe(concat('scripts.js'))
+        .pipe(gulp.dest('./build/assets/javascript/'));
 });
 
 gulp.task('templates', function() {
