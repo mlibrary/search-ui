@@ -1,0 +1,28 @@
+{
+  "datastores": [
+    {
+      "name": "Quick Search",
+      "active": true
+    },
+    {
+      "name": "Catalog",
+      "active": false
+    },
+    {
+      "name": "Articles",
+      "active": false
+    },
+    {
+      "name": "Databases",
+      "active": false
+    },
+    {
+      "name": "Online Journals",
+      "active": false
+    },
+    {
+      "name": "More",
+      "active": false
+    }
+  ]
+}
